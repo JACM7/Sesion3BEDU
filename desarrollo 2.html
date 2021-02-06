@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js">
+</script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<head>
+	<title>Cajero Electronico</title>
+</head>
+<body>
+	
+	<style type="text/css" id="dcoder_stylesheet">
+
+	body {
+		background: red;
+		}
+		
+	.wait {
+		display: flex;
+		width: 350px;
+		height: 40px;
+		color: white;
+		font-size: 40px;
+		line-height: 40px;
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		margin: auto;
+		overflow: hidden;
+	}
+
+	ul {
+		list-style: none;
+		padding-left: 10px;
+		animation: cambiar 7s infinite;
+	}
+
+	ul , p {
+		margin: 0;
+	}
+
+	@keyframes cambiar {
+		0% {margin-top: 0;}
+		20% {margin-top: 0;}
+
+		25% {margin-top: -40px;}
+		50% {margin-top: -40px;}
+
+		55% {margin-top: -80px;}
+		80% {margin-top: -80px;}
+
+		85% {margin-top: 0;}
+		100% {margin-top: 0;}
+	}
+
+	.cerrar {
+		transform: translateY(-260px);
+		}
+
+		form {
+			margin: auto;
+			width: 70px;
+			height: 20px;
+			background-color: white;
+			animation-name: colorchange;
+			animation-duration: 7s;
+		}
+
+		a {
+			color: red;
+		}
+
+		@keyframes colorchange {
+			0% {background-color: red;}
+			100% {background-color: red;}
+		} 
+
+	</style>
+
+	<div class="wait" id="wait">
+		<p>Procesando</p>
+		<ul>
+			<li>Usuario</li>
+			<li>PIN</li>
+			<li>Espere</li>
+		</ul>
+	</div>
+
+	<form>
+	<a href="desarrollo 3.html"> Click aqui</a>
+	</form>
+
+	<script type="text/javascript" id="dcoder_script">
+
+		var wait = document.getElementById('wait');
+		setTimeout(function() {
+			wait.classList.add('cerrar')
+		} , 7000)
+
+	</script>
+
+</body>
+</html>
